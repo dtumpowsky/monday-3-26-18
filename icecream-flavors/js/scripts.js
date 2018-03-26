@@ -1,4 +1,4 @@
-var favoriteFlavors = [];
+var myFlavors = [];
 
 $(document).ready(function(event) {
     $("form#flavors").submit(function(event) {
@@ -10,6 +10,9 @@ $(document).ready(function(event) {
         var flavorInput = $("input#" + flavor).val();
         $("." + flavor).text(flavorInput);
         $(".list").append("<li>" + flavorInput + "</li>");
+        myFlavors.push(flavorInput);
+        console.log(myFlavors);
       });
+
     });
 });
